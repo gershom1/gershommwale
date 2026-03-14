@@ -1,0 +1,3336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Gershom Mwale – Lecturer, Researcher, and Academic Mentor. Explore research, publications, blog articles, and teaching resources.">
+<meta name="keywords" content="Gershom Mwale, lecturer, researcher, academic, Zambia, university, publications, teaching resources">
+<meta property="og:title" content="Gershom Mwale | Lecturer & Researcher">
+<meta property="og:description" content="Academic portfolio, research publications, blog, and teaching resources by Gershom Mwale.">
+<meta property="og:url" content="https://gershommwale.com">
+<title>Gershom Mwale | Lecturer, Researcher & Academic Mentor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════
+   ROOT & DESIGN TOKENS
+═══════════════════════════════════════════════ */
+:root {
+  --navy:       #0d1b2a;
+  --navy-mid:   #162235;
+  --navy-light: #1e3250;
+  --teal:       #2a9d8f;
+  --teal-light: #3bbdad;
+  --gold:       #e9c46a;
+  --gold-soft:  #f4d48a;
+  --cream:      #faf8f3;
+  --cream-mid:  #f0ece2;
+  --warm-grey:  #8a8578;
+  --text-dark:  #1a1612;
+  --text-mid:   #4a4540;
+  --text-light: #7a756e;
+  --border:     #e0dbd0;
+  --white:      #ffffff;
+  --shadow-sm:  0 2px 8px rgba(13,27,42,0.08);
+  --shadow-md:  0 8px 32px rgba(13,27,42,0.12);
+  --shadow-lg:  0 20px 60px rgba(13,27,42,0.18);
+  --radius:     8px;
+  --radius-lg:  16px;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans:  'DM Sans', system-ui, sans-serif;
+  --font-mono:  'DM Mono', monospace;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ═══════════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  background: var(--cream);
+  color: var(--text-dark);
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+input, textarea, select { font-family: inherit; font-size: inherit; }
+::selection { background: var(--gold); color: var(--navy); }
+
+/* ═══════════════════════════════════════════════
+   TYPOGRAPHY
+═══════════════════════════════════════════════ */
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+h1 { font-size: clamp(2.4rem, 6vw, 4.5rem); font-weight: 300; }
+h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.3rem, 3vw, 1.9rem); }
+h4 { font-size: 1.2rem; }
+p { color: var(--text-mid); }
+.serif { font-family: var(--font-serif); }
+.mono  { font-family: var(--font-mono); }
+
+/* ═══════════════════════════════════════════════
+   LAYOUT UTILITIES
+═══════════════════════════════════════════════ */
+.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.section    { padding: 80px 0; }
+.section-sm { padding: 48px 0; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.flex   { display: flex; }
+.items-center { align-items: center; }
+.gap-2  { gap: 8px; }
+.gap-4  { gap: 16px; }
+.gap-6  { gap: 24px; }
+.mt-2   { margin-top: 8px; }
+.mt-4   { margin-top: 16px; }
+.mt-6   { margin-top: 24px; }
+.mt-8   { margin-top: 32px; }
+.mb-4   { margin-bottom: 16px; }
+.mb-6   { margin-bottom: 24px; }
+.text-center { text-align: center; }
+
+/* ═══════════════════════════════════════════════
+   BUTTONS
+═══════════════════════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: var(--transition);
+}
+.btn-primary {
+  background: var(--teal);
+  color: var(--white);
+}
+.btn-primary:hover { background: var(--teal-light); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+.btn-outline {
+  border: 1.5px solid var(--navy);
+  color: var(--navy);
+}
+.btn-outline:hover { background: var(--navy); color: var(--white); }
+.btn-gold {
+  background: var(--gold);
+  color: var(--navy);
+}
+.btn-gold:hover { background: var(--gold-soft); }
+.btn-ghost {
+  border: 1.5px solid rgba(255,255,255,0.4);
+  color: var(--white);
+}
+.btn-ghost:hover { background: rgba(255,255,255,0.12); }
+.btn-sm { padding: 8px 18px; font-size: 0.8rem; }
+.btn-lg { padding: 16px 40px; font-size: 1rem; }
+
+/* ═══════════════════════════════════════════════
+   CARDS
+═══════════════════════════════════════════════ */
+.card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+.card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.card-body { padding: 28px; }
+
+/* ═══════════════════════════════════════════════
+   BADGES / TAGS
+═══════════════════════════════════════════════ */
+.badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.badge-teal  { background: rgba(42,157,143,0.12); color: var(--teal); }
+.badge-gold  { background: rgba(233,196,106,0.2); color: #9a6e00; }
+.badge-navy  { background: rgba(13,27,42,0.08); color: var(--navy); }
+.badge-grey  { background: var(--cream-mid); color: var(--text-light); }
+
+/* ═══════════════════════════════════════════════
+   FORM ELEMENTS
+═══════════════════════════════════════════════ */
+.form-group { margin-bottom: 20px; }
+.form-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+.form-input, .form-textarea, .form-select {
+  width: 100%;
+  padding: 11px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--text-dark);
+  transition: border-color var(--transition);
+  outline: none;
+}
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(42,157,143,0.1);
+}
+.form-textarea { resize: vertical; min-height: 120px; }
+
+/* ═══════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════ */
+#nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(13,27,42,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: var(--transition);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  gap: 32px;
+}
+.nav-logo {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--white);
+  font-weight: 400;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.nav-logo span { color: var(--gold); }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+}
+.nav-links a {
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.72);
+  border-radius: 4px;
+  transition: var(--transition);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.nav-links a:hover, .nav-links a.active {
+  color: var(--white);
+  background: rgba(255,255,255,0.08);
+}
+.nav-links a.active { color: var(--gold); }
+.nav-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.nav-search {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px;
+  padding: 6px 12px;
+  gap: 8px;
+}
+.nav-search input {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--white);
+  font-size: 0.83rem;
+  width: 160px;
+}
+.nav-search input::placeholder { color: rgba(255,255,255,0.4); }
+.nav-search svg { opacity: 0.5; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.hamburger span { display: block; width: 22px; height: 1.5px; background: var(--white); transition: var(--transition); }
+
+/* ═══════════════════════════════════════════════
+   PAGES — hidden/shown via JS
+═══════════════════════════════════════════════ */
+.page { display: none; padding-top: 68px; }
+.page.active { display: block; }
+
+/* ═══════════════════════════════════════════════
+   HOME — HERO
+═══════════════════════════════════════════════ */
+.hero {
+  background: var(--navy);
+  min-height: calc(100vh - 68px);
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 80px;
+  align-items: center;
+  padding: 80px 0;
+}
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.hero-line {
+  width: 40px; height: 1px;
+  background: var(--gold);
+}
+.hero-eyebrow-text {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+}
+.hero h1 {
+  color: var(--white);
+  margin-bottom: 8px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.hero-title {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 28px;
+  font-family: var(--font-serif);
+  font-weight: 300;
+  letter-spacing: 0.03em;
+}
+.hero-desc {
+  color: rgba(255,255,255,0.72);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 520px;
+  margin-bottom: 40px;
+}
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero-photo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.hero-photo {
+  width: 340px;
+  height: 420px;
+  border-radius: 12px;
+  background: var(--navy-light);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255,255,255,0.25);
+}
+.hero-photo-placeholder svg { width: 72px; height: 72px; }
+.hero-photo-placeholder span { font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
+.hero-photo::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--teal), var(--gold));
+}
+.hero-photo-badge {
+  background: rgba(42,157,143,0.15);
+  border: 1px solid rgba(42,157,143,0.3);
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: var(--teal-light);
+  font-size: 0.82rem;
+  text-align: center;
+  font-family: var(--font-serif);
+}
+
+/* Background decoration */
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(42,157,143,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-pattern {
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 45%;
+  opacity: 0.02;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════
+   HOME — STATS STRIP
+═══════════════════════════════════════════════ */
+.stats-strip {
+  background: var(--teal);
+  padding: 32px 0;
+}
+.stats-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.stat-item { text-align: center; }
+.stat-num {
+  font-family: var(--font-serif);
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+/* ═══════════════════════════════════════════════
+   SECTION HEADERS
+═══════════════════════════════════════════════ */
+.section-header { margin-bottom: 56px; }
+.section-header.center { text-align: center; }
+.overline {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.overline::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.section-header.center .overline { justify-content: center; }
+.section-header.center .overline::after { display: none; }
+.section-header h2 { margin-bottom: 12px; }
+.section-header p { color: var(--text-light); max-width: 560px; font-size: 1.05rem; }
+.section-header.center p { margin: 0 auto; }
+
+/* ═══════════════════════════════════════════════
+   HOME — FEATURED AREAS
+═══════════════════════════════════════════════ */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.feature-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--teal);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+.feature-card:hover::before { transform: scaleX(1); }
+.feature-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.feature-icon {
+  width: 56px; height: 56px;
+  margin: 0 auto 16px;
+  background: rgba(42,157,143,0.08);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--teal);
+}
+.feature-card h4 {
+  margin-bottom: 8px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.feature-card p { font-size: 0.85rem; color: var(--text-light); }
+
+/* ═══════════════════════════════════════════════
+   HOME — ANNOUNCEMENTS
+═══════════════════════════════════════════════ */
+.announcements-section { background: var(--navy); }
+.announcement-list { display: flex; flex-direction: column; gap: 0; }
+.announcement-item {
+  display: flex;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  align-items: flex-start;
+}
+.announcement-item:last-child { border-bottom: none; }
+.ann-date {
+  flex-shrink: 0;
+  width: 80px;
+  text-align: center;
+}
+.ann-day { font-family: var(--font-serif); font-size: 2rem; color: var(--gold); line-height: 1; }
+.ann-month { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.4); }
+.ann-content { flex: 1; }
+.ann-tag {
+  display: inline-block;
+  padding: 2px 10px;
+  background: rgba(42,157,143,0.18);
+  border-radius: 20px;
+  font-size: 0.72rem;
+  color: var(--teal-light);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.ann-title { color: var(--white); font-family: var(--font-serif); font-size: 1.1rem; margin-bottom: 4px; }
+.ann-desc { color: rgba(255,255,255,0.5); font-size: 0.88rem; }
+
+/* ═══════════════════════════════════════════════
+   ABOUT PAGE
+═══════════════════════════════════════════════ */
+.about-hero {
+  background: var(--navy);
+  padding: 80px 0 60px;
+}
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 60px;
+  align-items: start;
+}
+.about-photo {
+  width: 260px;
+  height: 320px;
+  background: var(--navy-light);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.2);
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+.about-photo::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--teal), var(--gold));
+}
+.about-name { color: var(--white); margin-bottom: 6px; }
+.about-title { color: var(--gold); font-family: var(--font-serif); font-size: 1.05rem; margin-bottom: 16px; }
+.about-meta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+.about-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.87rem;
+}
+.about-meta-item svg { color: var(--teal); }
+.about-bio { color: rgba(255,255,255,0.75); line-height: 1.8; font-size: 1.03rem; }
+.about-social { display: flex; gap: 10px; margin-top: 24px; }
+.social-btn {
+  width: 38px; height: 38px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.6);
+  transition: var(--transition);
+}
+.social-btn:hover { background: var(--teal); color: var(--white); border-color: var(--teal); }
+
+.timeline { position: relative; padding-left: 32px; }
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px; top: 0; bottom: 0;
+  width: 1px;
+  background: var(--border);
+}
+.timeline-item { position: relative; margin-bottom: 32px; }
+.timeline-dot {
+  position: absolute;
+  left: -29px;
+  top: 5px;
+  width: 15px; height: 15px;
+  background: var(--teal);
+  border-radius: 50%;
+  border: 3px solid var(--cream);
+}
+.timeline-year {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--teal);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.timeline-title { font-family: var(--font-serif); font-size: 1.15rem; margin-bottom: 2px; }
+.timeline-inst { color: var(--text-light); font-size: 0.9rem; margin-bottom: 6px; }
+.timeline-desc { font-size: 0.9rem; color: var(--text-mid); }
+
+.skills-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+.skill-tag {
+  padding: 6px 16px;
+  background: rgba(42,157,143,0.08);
+  border: 1px solid rgba(42,157,143,0.2);
+  border-radius: 20px;
+  font-size: 0.83rem;
+  color: var(--teal);
+  font-weight: 500;
+}
+
+.achievement-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  transition: var(--transition);
+}
+.achievement-card:hover { box-shadow: var(--shadow-sm); }
+.achievement-icon {
+  width: 44px; height: 44px;
+  background: rgba(233,196,106,0.12);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9a6e00;
+  flex-shrink: 0;
+}
+.achievement-card h4 { font-family: var(--font-sans); font-weight: 600; font-size: 0.95rem; margin-bottom: 3px; }
+.achievement-card p { font-size: 0.85rem; color: var(--text-light); }
+
+/* ═══════════════════════════════════════════════
+   RESEARCH PAGE
+═══════════════════════════════════════════════ */
+.page-hero {
+  background: var(--navy);
+  padding: 72px 0 48px;
+  margin-bottom: 0;
+}
+.page-hero h1 { color: var(--white); margin-bottom: 10px; }
+.page-hero p { color: rgba(255,255,255,0.6); font-size: 1.05rem; }
+
+.research-interests {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.interest-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  border-left: 4px solid var(--teal);
+}
+.interest-card h4 { font-family: var(--font-sans); font-size: 0.95rem; font-weight: 600; margin-bottom: 6px; }
+.interest-card p { font-size: 0.85rem; color: var(--text-light); }
+
+.publication-item {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin-bottom: 16px;
+  transition: var(--transition);
+}
+.publication-item:hover { box-shadow: var(--shadow-sm); border-color: var(--teal); }
+.pub-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+.pub-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.pub-authors { font-size: 0.87rem; color: var(--text-light); margin-bottom: 4px; }
+.pub-journal { font-size: 0.87rem; color: var(--text-mid); font-style: italic; }
+.pub-links { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+.pub-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 12px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  color: var(--text-mid);
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.pub-link:hover { border-color: var(--teal); color: var(--teal); }
+
+.project-card {
+  background: var(--navy);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.project-card::before {
+  content: '';
+  position: absolute;
+  bottom: -40px; right: -40px;
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  background: rgba(42,157,143,0.08);
+}
+.project-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: rgba(42,157,143,0.2);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: var(--teal-light);
+  margin-bottom: 16px;
+}
+.project-status-dot {
+  width: 6px; height: 6px;
+  background: var(--teal-light);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.project-card h3 { color: var(--white); margin-bottom: 10px; font-size: 1.3rem; }
+.project-card p { color: rgba(255,255,255,0.65); font-size: 0.92rem; margin-bottom: 16px; }
+.project-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.project-tag {
+  padding: 4px 10px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.6);
+}
+
+/* ═══════════════════════════════════════════════
+   BLOG PAGE
+═══════════════════════════════════════════════ */
+.blog-layout { display: grid; grid-template-columns: 1fr 300px; gap: 48px; }
+.blog-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+.filter-btn {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  border: 1.5px solid var(--border);
+  color: var(--text-mid);
+  transition: var(--transition);
+  background: var(--white);
+}
+.filter-btn:hover, .filter-btn.active {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: var(--white);
+}
+.blog-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: var(--transition);
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+.blog-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.blog-card-img {
+  height: 200px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  color: rgba(255,255,255,0.15);
+  letter-spacing: 0.1em;
+  position: relative;
+  overflow: hidden;
+}
+.blog-card-img::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 60px;
+  background: linear-gradient(transparent, rgba(13,27,42,0.5));
+}
+.blog-card-body { padding: 24px; flex: 1; }
+.blog-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+.blog-meta-date { font-size: 0.8rem; color: var(--text-light); }
+.blog-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: var(--navy);
+}
+.blog-card h3 a:hover { color: var(--teal); }
+.blog-card p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.65; }
+.blog-card-footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.read-more {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--teal);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+.read-more:hover { gap: 8px; }
+.read-time { font-size: 0.78rem; color: var(--text-light); }
+.sidebar-widget {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.sidebar-widget h4 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-mid);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.category-list { display: flex; flex-direction: column; gap: 8px; }
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.88rem;
+}
+.category-item:hover { background: var(--cream-mid); color: var(--teal); }
+.category-count {
+  background: var(--cream-mid);
+  color: var(--text-light);
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+.tag-cloud { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag-item {
+  padding: 4px 12px;
+  background: var(--cream-mid);
+  border-radius: 4px;
+  font-size: 0.78rem;
+  color: var(--text-mid);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.tag-item:hover { background: var(--teal); color: var(--white); }
+
+/* ═══════════════════════════════════════════════
+   BLOG POST VIEW
+═══════════════════════════════════════════════ */
+.blog-post-hero {
+  background: var(--navy);
+  padding: 80px 0 60px;
+}
+.blog-post-hero h1 { color: var(--white); max-width: 780px; }
+.blog-post-meta { display: flex; align-items: center; gap: 16px; margin-top: 20px; flex-wrap: wrap; }
+.blog-post-body {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+.blog-post-body h2 { font-size: 1.8rem; margin: 40px 0 16px; }
+.blog-post-body h3 { font-size: 1.3rem; margin: 28px 0 12px; }
+.blog-post-body p { margin-bottom: 20px; line-height: 1.8; font-size: 1.05rem; }
+.blog-post-body blockquote {
+  border-left: 3px solid var(--teal);
+  padding: 12px 24px;
+  margin: 28px 0;
+  background: rgba(42,157,143,0.05);
+  border-radius: 0 8px 8px 0;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--text-mid);
+  font-style: italic;
+}
+
+/* ═══════════════════════════════════════════════
+   TEACHING RESOURCES
+═══════════════════════════════════════════════ */
+.resources-nav {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--white);
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+.resources-nav-btn {
+  flex: 1;
+  min-width: 120px;
+  padding: 12px 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  border-right: 1px solid var(--border);
+  text-align: center;
+  transition: var(--transition);
+  background: var(--white);
+}
+.resources-nav-btn:last-child { border-right: none; }
+.resources-nav-btn:hover, .resources-nav-btn.active {
+  background: var(--teal);
+  color: var(--white);
+}
+.course-section { margin-bottom: 48px; }
+.course-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 24px;
+  background: var(--navy);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+.course-icon {
+  width: 48px; height: 48px;
+  background: rgba(42,157,143,0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--teal-light);
+  flex-shrink: 0;
+}
+.course-header h3 { color: var(--white); font-size: 1.25rem; }
+.course-header p { color: rgba(255,255,255,0.55); font-size: 0.85rem; }
+.course-files {
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  overflow: hidden;
+}
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+  transition: var(--transition);
+}
+.file-item:last-child { border-bottom: none; }
+.file-item:hover { background: var(--cream); }
+.file-type-icon {
+  width: 36px; height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+}
+.file-type-pdf { background: rgba(220,53,69,0.1); color: #dc3545; }
+.file-type-ppt { background: rgba(253,126,20,0.1); color: #fd7e14; }
+.file-type-doc { background: rgba(13,110,253,0.1); color: #0d6efd; }
+.file-info { flex: 1; }
+.file-name { font-size: 0.92rem; font-weight: 500; color: var(--text-dark); }
+.file-meta { font-size: 0.78rem; color: var(--text-light); margin-top: 2px; }
+.file-download {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.file-download:hover { border-color: var(--teal); color: var(--teal); }
+
+/* ═══════════════════════════════════════════════
+   STUDENT NOTES SUBMISSION
+═══════════════════════════════════════════════ */
+.submission-wrap {
+  background: var(--navy);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+}
+.submission-wrap::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 300px; height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(42,157,143,0.1) 0%, transparent 70%);
+}
+.submission-wrap h3 { color: var(--white); margin-bottom: 8px; }
+.submission-wrap > p { color: rgba(255,255,255,0.55); margin-bottom: 32px; }
+.submission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.submit-form .form-input, .submit-form .form-textarea, .submit-form .form-select {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.12);
+  color: var(--white);
+}
+.submit-form .form-input::placeholder, .submit-form .form-textarea::placeholder {
+  color: rgba(255,255,255,0.3);
+}
+.submit-form .form-input:focus, .submit-form .form-textarea:focus, .submit-form .form-select:focus {
+  border-color: var(--teal);
+}
+.submit-form .form-select option { background: var(--navy); }
+.submit-form .form-label { color: rgba(255,255,255,0.6); }
+.upload-area {
+  border: 2px dashed rgba(255,255,255,0.15);
+  border-radius: var(--radius);
+  padding: 32px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.upload-area:hover { border-color: var(--teal); background: rgba(42,157,143,0.05); }
+.upload-icon { color: rgba(255,255,255,0.25); margin-bottom: 10px; }
+.upload-text { color: rgba(255,255,255,0.4); font-size: 0.88rem; }
+.upload-text span { color: var(--teal-light); font-weight: 500; }
+
+/* ═══════════════════════════════════════════════
+   CONTACT PAGE
+═══════════════════════════════════════════════ */
+.contact-grid { display: grid; grid-template-columns: 1fr 380px; gap: 64px; }
+.contact-info { display: flex; flex-direction: column; gap: 24px; }
+.contact-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.contact-card-icon {
+  width: 44px; height: 44px;
+  background: rgba(42,157,143,0.08);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--teal);
+  flex-shrink: 0;
+}
+.contact-card-label { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); margin-bottom: 4px; }
+.contact-card-value { font-size: 0.95rem; font-weight: 500; color: var(--text-dark); }
+.contact-card-value a { color: var(--teal); }
+.social-links-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 8px; }
+.social-link-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  transition: var(--transition);
+}
+.social-link-card:hover { border-color: var(--teal); color: var(--teal); transform: translateX(2px); }
+.contact-form-wrap {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+}
+.contact-form-wrap h3 { margin-bottom: 24px; font-size: 1.4rem; }
+
+/* ═══════════════════════════════════════════════
+   ADMIN DASHBOARD
+═══════════════════════════════════════════════ */
+.admin-layout { display: grid; grid-template-columns: 240px 1fr; min-height: calc(100vh - 68px); }
+.admin-sidebar {
+  background: var(--navy);
+  padding: 32px 0;
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+.admin-sidebar-header {
+  padding: 0 24px 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 16px;
+}
+.admin-sidebar-header h4 { color: var(--white); font-family: var(--font-sans); font-size: 0.9rem; font-weight: 600; }
+.admin-sidebar-header p { color: rgba(255,255,255,0.4); font-size: 0.78rem; }
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 24px;
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.55);
+  cursor: pointer;
+  transition: var(--transition);
+  border-left: 2px solid transparent;
+}
+.admin-nav-item:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+.admin-nav-item.active { color: var(--teal-light); border-left-color: var(--teal); background: rgba(42,157,143,0.08); }
+.admin-main { background: var(--cream); padding: 36px; overflow-y: auto; }
+.admin-header { margin-bottom: 32px; }
+.admin-header h2 { font-size: 1.6rem; margin-bottom: 4px; }
+.admin-header p { color: var(--text-light); font-size: 0.9rem; }
+.admin-stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+.admin-stat {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.admin-stat-label { font-size: 0.78rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+.admin-stat-num { font-family: var(--font-serif); font-size: 2rem; color: var(--navy); }
+.admin-stat-change { font-size: 0.78rem; color: var(--teal); margin-top: 4px; }
+.admin-section { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); margin-bottom: 24px; }
+.admin-section-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.admin-section-header h3 { font-family: var(--font-sans); font-size: 1rem; font-weight: 600; }
+.admin-section-body { padding: 24px; }
+.admin-table { width: 100%; border-collapse: collapse; font-size: 0.87rem; }
+.admin-table th {
+  text-align: left;
+  padding: 10px 16px;
+  background: var(--cream);
+  font-weight: 600;
+  color: var(--text-light);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--border);
+}
+.admin-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-dark);
+}
+.admin-table tr:last-child td { border-bottom: none; }
+.admin-table tr:hover td { background: var(--cream); }
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+.status-pending  { background: rgba(253,126,20,0.1); color: #fd7e14; }
+.status-approved { background: rgba(42,157,143,0.1); color: var(--teal); }
+.status-draft    { background: rgba(108,117,125,0.1); color: #6c757d; }
+.status-published { background: rgba(42,157,143,0.1); color: var(--teal); }
+.action-btn {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  color: var(--text-mid);
+  margin-right: 4px;
+  transition: var(--transition);
+}
+.action-btn:hover { border-color: var(--teal); color: var(--teal); }
+.action-btn.danger:hover { border-color: #dc3545; color: #dc3545; }
+.editor-area {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.editor-toolbar {
+  background: var(--cream);
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.editor-tool {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-mid);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.editor-tool:hover { background: var(--border); }
+.editor-content {
+  width: 100%;
+  min-height: 200px;
+  padding: 16px;
+  border: none;
+  outline: none;
+  resize: vertical;
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: var(--text-dark);
+  font-family: var(--font-sans);
+}
+.file-upload-admin {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.file-upload-admin:hover { border-color: var(--teal); background: rgba(42,157,143,0.03); }
+.pending-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.pending-note:last-child { border-bottom: none; }
+.pending-note-info { flex: 1; }
+.pending-note-title { font-weight: 500; font-size: 0.92rem; margin-bottom: 3px; }
+.pending-note-meta { font-size: 0.8rem; color: var(--text-light); }
+.pending-note-actions { display: flex; gap: 6px; }
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.55);
+  padding: 64px 0 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-brand h3 { font-family: var(--font-serif); color: var(--white); font-size: 1.4rem; margin-bottom: 10px; }
+.footer-brand p { font-size: 0.88rem; line-height: 1.7; }
+.footer-col h4 {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.5);
+  transition: var(--transition);
+}
+.footer-links a:hover { color: var(--gold); }
+.footer-bottom {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { color: rgba(255,255,255,0.4); transition: var(--transition); }
+.footer-bottom-links a:hover { color: var(--white); }
+.footer-social { display: flex; gap: 8px; }
+.footer-social-icon {
+  width: 34px; height: 34px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+  color: rgba(255,255,255,0.5);
+}
+.footer-social-icon:hover { background: var(--teal); color: var(--white); }
+
+/* ═══════════════════════════════════════════════
+   DIVIDERS & MISC
+═══════════════════════════════════════════════ */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 40px 0;
+}
+.text-teal   { color: var(--teal); }
+.text-gold   { color: var(--gold); }
+.text-navy   { color: var(--navy); }
+.text-light  { color: var(--text-light); }
+.bg-cream    { background: var(--cream-mid); }
+.bg-navy     { background: var(--navy); }
+.inline-flex { display: inline-flex; align-items: center; gap: 6px; }
+.cv-download {
+  background: var(--gold);
+  color: var(--navy);
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+.cv-download:hover { background: var(--gold-soft); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+
+/* ═══════════════════════════════════════════════
+   TOAST NOTIFICATION
+═══════════════════════════════════════════════ */
+.toast {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  background: var(--navy);
+  color: var(--white);
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-lg);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+.toast-success { border-left: 3px solid var(--teal); }
+.toast-error { border-left: 3px solid #dc3545; }
+
+/* ═══════════════════════════════════════════════
+   MOBILE NAV MENU
+═══════════════════════════════════════════════ */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 68px; left: 0; right: 0;
+  background: var(--navy);
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 999;
+}
+.mobile-menu.open { display: block; }
+.mobile-menu a {
+  display: block;
+  padding: 12px 24px;
+  color: rgba(255,255,255,0.72);
+  font-size: 0.92rem;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.mobile-menu a:hover { color: var(--white); background: rgba(255,255,255,0.04); }
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 48px; }
+  .hero-photo-wrap { display: none; }
+  .feature-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .research-interests { grid-template-columns: repeat(2, 1fr); }
+  .admin-layout { grid-template-columns: 1fr; }
+  .admin-sidebar { display: none; }
+}
+@media (max-width: 768px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .blog-layout { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .about-hero-grid { grid-template-columns: 1fr; }
+  .about-photo { width: 100%; height: 240px; }
+  .nav-links { display: none; }
+  .nav-search { display: none; }
+  .hamburger { display: flex; }
+  .stats-inner { flex-direction: column; gap: 20px; text-align: center; }
+  .feature-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .section { padding: 60px 0; }
+  .hero { min-height: auto; }
+  .hero-grid { padding: 60px 0 40px; }
+  .submission-wrap { padding: 28px 20px; }
+  .submission-grid { grid-template-columns: 1fr; }
+  .admin-stats-row { grid-template-columns: repeat(2, 1fr); }
+  .social-links-grid { grid-template-columns: 1fr; }
+  .research-interests { grid-template-columns: 1fr; }
+  .resources-nav-btn { min-width: auto; font-size: 0.78rem; padding: 10px 14px; }
+}
+@media (max-width: 480px) {
+  .feature-grid { grid-template-columns: 1fr; }
+  .hero-buttons { flex-direction: column; }
+  .btn-lg { width: 100%; justify-content: center; }
+  .admin-stats-row { grid-template-columns: 1fr 1fr; }
+}
+
+/* ═══════════════════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════════════════ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.6s ease forwards; }
+.fade-up-2 { animation: fadeUp 0.6s 0.1s ease both; }
+.fade-up-3 { animation: fadeUp 0.6s 0.2s ease both; }
+.fade-up-4 { animation: fadeUp 0.6s 0.3s ease both; }
+
+/* ═══════════════════════════════════════════════
+   SEARCH HIGHLIGHT
+═══════════════════════════════════════════════ */
+mark { background: rgba(233,196,106,0.3); color: inherit; border-radius: 2px; padding: 0 2px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════ -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a class="nav-logo" href="#" onclick="showPage('home')">
+        Gershom <span>Mwale</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#" onclick="showPage('home')" data-page="home">Home</a></li>
+        <li><a href="#" onclick="showPage('about')" data-page="about">About</a></li>
+        <li><a href="#" onclick="showPage('research')" data-page="research">Research</a></li>
+        <li><a href="#" onclick="showPage('blog')" data-page="blog">Blog</a></li>
+        <li><a href="#" onclick="showPage('teaching')" data-page="teaching">Teaching</a></li>
+        <li><a href="#" onclick="showPage('contact')" data-page="contact">Contact</a></li>
+        <li><a href="#" onclick="showPage('admin')" data-page="admin" style="color:var(--gold)">Admin ↗</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="nav-search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input type="text" id="globalSearch" placeholder="Search site…" oninput="handleSearch(this.value)" onkeydown="if(event.key==='Enter')doSearch()">
+        </div>
+        <button class="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#" onclick="showPage('home');closeMobileMenu()">Home</a>
+  <a href="#" onclick="showPage('about');closeMobileMenu()">About</a>
+  <a href="#" onclick="showPage('research');closeMobileMenu()">Research</a>
+  <a href="#" onclick="showPage('blog');closeMobileMenu()">Blog</a>
+  <a href="#" onclick="showPage('teaching');closeMobileMenu()">Teaching</a>
+  <a href="#" onclick="showPage('contact');closeMobileMenu()">Contact</a>
+  <a href="#" onclick="showPage('admin');closeMobileMenu()" style="color:var(--gold)">Admin Dashboard</a>
+</div>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast"></div>
+
+<!-- ═══════════════════════════════════════════
+     PAGE: HOME
+═══════════════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-pattern"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="fade-up">
+          <div class="hero-eyebrow">
+            <div class="hero-line"></div>
+            <span class="hero-eyebrow-text">Academic Profile</span>
+          </div>
+          <h1>Gershom<br><em>Mwale</em></h1>
+          <p class="hero-title">Lecturer · Researcher · Academic Mentor</p>
+          <p class="hero-desc">
+            Welcome to my academic space — a hub for research insights, scholarly publications,
+            teaching resources, and intellectual discourse. Committed to advancing knowledge and
+            empowering the next generation of thinkers across Zambia and beyond.
+          </p>
+          <div class="hero-buttons fade-up-2">
+            <button class="btn btn-primary btn-lg" onclick="showPage('about')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              About Me
+            </button>
+            <button class="btn btn-ghost btn-lg" onclick="showPage('research')">
+              Research & Publications
+            </button>
+            <a href="#" class="cv-download" onclick="showToast('CV download will be available soon.','success');return false;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download CV
+            </a>
+          </div>
+        </div>
+        <div class="hero-photo-wrap fade-up-3">
+          <div class="hero-photo">
+            <div class="hero-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span>Photo Placeholder</span>
+            </div>
+          </div>
+          <div class="hero-photo-badge">
+            📍 Lusaka, Zambia<br>
+            <small style="opacity:0.7">Open to collaborations</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="container">
+      <div class="stats-inner">
+        <div class="stat-item">
+          <div class="stat-num">8+</div>
+          <div class="stat-label">Years Teaching</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">24</div>
+          <div class="stat-label">Publications</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Active Courses</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">340+</div>
+          <div class="stat-label">Students Mentored</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">12</div>
+          <div class="stat-label">Conferences</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK ACCESS -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header center">
+        <p class="overline">Explore</p>
+        <h2>What You'll Find Here</h2>
+        <p>Navigate to the key sections of this academic website — from research to resources.</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card" onclick="showPage('about')">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h4>About & Bio</h4>
+          <p>Academic background, experience, and research interests</p>
+        </div>
+        <div class="feature-card" onclick="showPage('research')">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h4>Research</h4>
+          <p>Publications, ongoing projects, and scholarly contributions</p>
+        </div>
+        <div class="feature-card" onclick="showPage('blog')">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <h4>Blog</h4>
+          <p>Ideas, reflections, and academic discussions</p>
+        </div>
+        <div class="feature-card" onclick="showPage('teaching')">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h4>Teaching Resources</h4>
+          <p>Course notes, slides, and study materials</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-header">
+        <p class="overline">Recognition</p>
+        <h2>Achievements & Milestones</h2>
+      </div>
+      <div class="grid-3">
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div>
+            <h4>Best Research Paper Award</h4>
+            <p>Awarded at the National Academic Conference 2023 for outstanding contribution to interdisciplinary research.</p>
+          </div>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div>
+            <h4>Excellence in Teaching</h4>
+            <p>Recognised for innovative pedagogy and outstanding student outcomes for three consecutive academic years.</p>
+          </div>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <div>
+            <h4>PhD Scholarship Recipient</h4>
+            <p>Awarded full doctoral scholarship for academic excellence and research potential.</p>
+          </div>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <h4>Community Mentor of the Year</h4>
+            <p>Recognised for outstanding contribution to student mentorship and professional development.</p>
+          </div>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h4>International Conference Speaker</h4>
+            <p>Invited keynote speaker at 5 international academic conferences across Africa and beyond.</p>
+          </div>
+        </div>
+        <div class="achievement-card">
+          <div class="achievement-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div>
+            <h4>Research Grant Recipient</h4>
+            <p>Secured competitive research funding for projects in education technology and policy development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANNOUNCEMENTS -->
+  <section class="section announcements-section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:40px">
+        <p class="overline" style="color:var(--gold)">Updates</p>
+        <h2 style="color:var(--white)">Announcements</h2>
+        <p style="color:rgba(255,255,255,0.5)">Important updates for students and collaborators.</p>
+      </div>
+      <div class="announcement-list">
+        <div class="announcement-item">
+          <div class="ann-date"><div class="ann-day">14</div><div class="ann-month">Mar 2026</div></div>
+          <div class="ann-content">
+            <div class="ann-tag">Academic</div>
+            <div class="ann-title">Semester 1 Lecture Notes Now Available</div>
+            <div class="ann-desc">All lecture notes for ECON 301 and ECON 402 have been uploaded to the Teaching Resources section. Students are encouraged to download and review before next week's sessions.</div>
+          </div>
+        </div>
+        <div class="announcement-item">
+          <div class="ann-date"><div class="ann-day">05</div><div class="ann-month">Mar 2026</div></div>
+          <div class="ann-content">
+            <div class="ann-tag">Research</div>
+            <div class="ann-title">New Paper Accepted in Journal of African Studies</div>
+            <div class="ann-desc">Excited to share that our paper on educational policy reform has been accepted for publication. Full details and preprint available in the Research section.</div>
+          </div>
+        </div>
+        <div class="announcement-item">
+          <div class="ann-date"><div class="ann-day">20</div><div class="ann-month">Feb 2026</div></div>
+          <div class="ann-content">
+            <div class="ann-tag">Event</div>
+            <div class="ann-title">Office Hours — Extended for Assignment Period</div>
+            <div class="ann-desc">Office hours will be extended to Tuesdays and Thursdays (2–5 PM) during the assignment submission period. Students requiring individual consultation are welcome.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENT BLOG PREVIEW -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:40px">
+        <div>
+          <p class="overline">Latest Thinking</p>
+          <h2>From the Blog</h2>
+        </div>
+        <button class="btn btn-outline" onclick="showPage('blog')">View All Posts →</button>
+      </div>
+      <div class="grid-3">
+        <div class="blog-card">
+          <div class="blog-card-img">✍</div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="badge badge-teal">Education</span>
+              <span class="blog-meta-date">12 Mar 2026</span>
+            </div>
+            <h3 style="font-size:1.1rem;margin-bottom:8px">Rethinking Assessment in Higher Education</h3>
+            <p style="font-size:0.87rem">How universities in Sub-Saharan Africa can move beyond rote examination towards critical thinking and competency-based assessment frameworks…</p>
+          </div>
+          <div class="blog-card-footer">
+            <span class="read-more" onclick="showPage('blog')">Read More →</span>
+            <span class="read-time">6 min read</span>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-card-img">📊</div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="badge badge-navy">Research</span>
+              <span class="blog-meta-date">28 Feb 2026</span>
+            </div>
+            <h3 style="font-size:1.1rem;margin-bottom:8px">Data Literacy as an Emerging Core Skill</h3>
+            <p style="font-size:0.87rem">Why every student — regardless of discipline — needs to understand data, and how educators can integrate data literacy across all curricula…</p>
+          </div>
+          <div class="blog-card-footer">
+            <span class="read-more" onclick="showPage('blog')">Read More →</span>
+            <span class="read-time">8 min read</span>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-card-img">🌍</div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span class="badge badge-gold">Policy</span>
+              <span class="blog-meta-date">15 Feb 2026</span>
+            </div>
+            <h3 style="font-size:1.1rem;margin-bottom:8px">Education Policy Gaps in Post-Colonial Africa</h3>
+            <p style="font-size:0.87rem">A critical examination of how historical legacies continue to shape education policy, and what reform looks like in the Zambian context…</p>
+          </div>
+          <div class="blog-card-footer">
+            <span class="read-more" onclick="showPage('blog')">Read More →</span>
+            <span class="read-time">10 min read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-home -->
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE: ABOUT
+═══════════════════════════════════════════ -->
+<div id="page-about" class="page">
+
+  <div class="about-hero">
+    <div class="container">
+      <div class="about-hero-grid">
+        <div>
+          <div class="about-photo">
+            <div style="text-align:center;color:rgba(255,255,255,0.2)">
+              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <div style="font-size:0.75rem;margin-top:8px;letter-spacing:0.06em">Your Photo Here</div>
+            </div>
+          </div>
+          <div class="about-social mt-4">
+            <a href="#" class="social-btn" title="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="#" class="social-btn" title="Google Scholar">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+            </a>
+            <a href="#" class="social-btn" title="ResearchGate">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            </a>
+            <a href="#" class="social-btn" title="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h1 class="about-name">Gershom Mwale</h1>
+          <p class="about-title">Lecturer, Researcher & Academic Mentor</p>
+          <div class="about-meta">
+            <div class="about-meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Lusaka, Zambia
+            </div>
+            <div class="about-meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              gershom@gershommwale.com
+            </div>
+            <div class="about-meta-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>
+              Department of Economics & Development Studies
+            </div>
+          </div>
+          <p class="about-bio">
+            Dr. Gershom Mwale is a dedicated academic, researcher, and mentor with over eight years of experience
+            in higher education. His work bridges economic theory, development policy, and educational reform,
+            focusing on the Zambian and broader Southern African context. He holds advanced degrees in Economics
+            and Education Policy, and has published extensively in peer-reviewed journals on topics ranging from
+            fiscal policy to curriculum innovation.
+          </p>
+          <p class="about-bio mt-4">
+            Beyond scholarship, Gershom is deeply invested in building a culture of intellectual curiosity among
+            his students, mentoring emerging researchers, and contributing to evidence-based policy dialogue that
+            shapes the future of education and economic development in Africa.
+          </p>
+          <div class="mt-6">
+            <a href="#" class="cv-download" onclick="showToast('CV download coming soon.','success');return false;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Full CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Academic Background -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-2" style="gap:64px;align-items:start">
+        <div>
+          <div class="section-header" style="margin-bottom:36px">
+            <p class="overline">Education</p>
+            <h2>Academic Background</h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2018 – 2022</div>
+              <div class="timeline-title">Doctor of Philosophy (PhD)</div>
+              <div class="timeline-inst">University of Zambia (UNZA) · Lusaka</div>
+              <div class="timeline-desc">Thesis: "Fiscal Policy and Education Outcomes in Sub-Saharan Africa: A Comparative Analysis"</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2013 – 2015</div>
+              <div class="timeline-title">Master of Arts in Development Economics</div>
+              <div class="timeline-inst">University of Lusaka · Lusaka</div>
+              <div class="timeline-desc">Specialisation in Education Finance and Economic Policy</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2009 – 2012</div>
+              <div class="timeline-title">Bachelor of Arts in Economics</div>
+              <div class="timeline-inst">Copperbelt University · Kitwe</div>
+              <div class="timeline-desc">First Class Honours · Best Graduating Student, Department of Economics</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="section-header" style="margin-bottom:36px">
+            <p class="overline">Career</p>
+            <h2>Professional Experience</h2>
+          </div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2022 – Present</div>
+              <div class="timeline-title">Lecturer & Researcher</div>
+              <div class="timeline-inst">University of Zambia · Dept. of Economics</div>
+              <div class="timeline-desc">Teaching undergraduate and postgraduate courses. Leading research in education policy and development economics.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2016 – 2022</div>
+              <div class="timeline-title">Assistant Lecturer</div>
+              <div class="timeline-inst">Mulungushi University · Kabwe</div>
+              <div class="timeline-desc">Taught macroeconomics, research methodology, and development studies. Led student research supervision.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-year">2014 – 2016</div>
+              <div class="timeline-title">Research Associate</div>
+              <div class="timeline-inst">Zambia Institute for Policy Analysis & Research (ZIPAR)</div>
+              <div class="timeline-desc">Conducted policy research on education financing and public expenditure tracking.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Interests & Teaching Areas -->
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="grid-2" style="gap:64px">
+        <div>
+          <p class="overline">Expertise</p>
+          <h2 class="mb-6">Research Interests</h2>
+          <div class="skills-grid">
+            <span class="skill-tag">Development Economics</span>
+            <span class="skill-tag">Education Policy & Reform</span>
+            <span class="skill-tag">Fiscal Policy Analysis</span>
+            <span class="skill-tag">Human Capital Theory</span>
+            <span class="skill-tag">Public Finance</span>
+            <span class="skill-tag">Higher Education Systems</span>
+            <span class="skill-tag">Curriculum Development</span>
+            <span class="skill-tag">Labour Market Economics</span>
+            <span class="skill-tag">Evidence-Based Policy</span>
+            <span class="skill-tag">Poverty & Inequality</span>
+            <span class="skill-tag">Qualitative Research Methods</span>
+            <span class="skill-tag">Econometrics</span>
+          </div>
+        </div>
+        <div>
+          <p class="overline">Teaching</p>
+          <h2 class="mb-6">Areas of Teaching</h2>
+          <div class="skills-grid">
+            <span class="skill-tag">Macroeconomics I & II</span>
+            <span class="skill-tag">Development Economics</span>
+            <span class="skill-tag">Research Methodology</span>
+            <span class="skill-tag">Economic Analysis</span>
+            <span class="skill-tag">Education Finance</span>
+            <span class="skill-tag">Policy Analysis</span>
+            <span class="skill-tag">Statistical Methods</span>
+            <span class="skill-tag">African Economic History</span>
+            <span class="skill-tag">Thesis Supervision</span>
+            <span class="skill-tag">Academic Writing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /page-about -->
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE: RESEARCH
+═══════════════════════════════════════════ -->
+<div id="page-research" class="page">
+
+  <div class="page-hero">
+    <div class="container">
+      <p class="overline" style="color:var(--gold);margin-bottom:12px">Scholarship</p>
+      <h1>Research & Publications</h1>
+      <p>Exploring development economics, education policy, and human capital across Africa.</p>
+      <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap">
+        <a href="#" class="btn btn-primary" onclick="showToast('Opening Google Scholar…','success');return false;">Google Scholar ↗</a>
+        <a href="#" class="btn btn-ghost" onclick="showToast('Opening ResearchGate…','success');return false;">ResearchGate ↗</a>
+        <a href="#" class="btn btn-ghost" onclick="showToast('Opening ORCID…','success');return false;">ORCID ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Research Interests -->
+      <div class="section-header" style="margin-bottom:32px">
+        <p class="overline">Focus Areas</p>
+        <h2>Research Interests</h2>
+      </div>
+      <div class="research-interests mb-6">
+        <div class="interest-card">
+          <h4>Education Policy & Finance</h4>
+          <p>Public investment in education, policy reform, curriculum design, and institutional effectiveness in Sub-Saharan Africa.</p>
+        </div>
+        <div class="interest-card">
+          <h4>Development Economics</h4>
+          <p>Human capital formation, poverty reduction, and inclusive economic growth through education and skills development.</p>
+        </div>
+        <div class="interest-card">
+          <h4>Fiscal Policy & Governance</h4>
+          <p>Public expenditure management, budget allocation for social sectors, and government accountability mechanisms.</p>
+        </div>
+        <div class="interest-card">
+          <h4>Labour Markets & Employment</h4>
+          <p>Skills mismatch, graduate employability, informal economy dynamics, and workforce transition in African economies.</p>
+        </div>
+        <div class="interest-card">
+          <h4>Higher Education Systems</h4>
+          <p>University governance, academic quality assurance, student access and equity, and internationalisation.</p>
+        </div>
+        <div class="interest-card">
+          <h4>Quantitative Research Methods</h4>
+          <p>Econometric modelling, panel data analysis, impact evaluation, and mixed-methods research design.</p>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Publications -->
+      <div class="section-header" style="margin-bottom:32px">
+        <p class="overline">Scholarship</p>
+        <h2>Selected Publications</h2>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-meta">
+          <span class="badge badge-teal">Journal Article</span>
+          <span class="badge badge-grey">2024</span>
+        </div>
+        <div class="pub-title">Fiscal Decentralisation and Education Outcomes in Zambia: A Panel Data Analysis (2000–2022)</div>
+        <div class="pub-authors">Mwale, G., Phiri, M. & Tembo, R.</div>
+        <div class="pub-journal">African Development Review, Vol. 36(2), pp. 112–130. doi:10.1111/adr.12345</div>
+        <div class="pub-links">
+          <a href="#" class="pub-link" onclick="showToast('Downloading PDF…','success');return false;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            PDF
+          </a>
+          <a href="#" class="pub-link">DOI</a>
+          <a href="#" class="pub-link">Abstract</a>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-meta">
+          <span class="badge badge-teal">Journal Article</span>
+          <span class="badge badge-grey">2023</span>
+        </div>
+        <div class="pub-title">Higher Education Quality Assurance in Southern Africa: Challenges and Reform Pathways</div>
+        <div class="pub-authors">Mwale, G. & Banda, C.</div>
+        <div class="pub-journal">Journal of Higher Education in Africa, Vol. 21(1), pp. 45–68.</div>
+        <div class="pub-links">
+          <a href="#" class="pub-link" onclick="showToast('Downloading PDF…','success');return false;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            PDF
+          </a>
+          <a href="#" class="pub-link">DOI</a>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-meta">
+          <span class="badge badge-gold">Book Chapter</span>
+          <span class="badge badge-grey">2023</span>
+        </div>
+        <div class="pub-title">Education Finance in Post-Colonial Africa: Lessons from Zambia</div>
+        <div class="pub-authors">Mwale, G.</div>
+        <div class="pub-journal">In: Banda, E. (Ed.), <em>Financing Education in Africa</em>. Nairobi: African Academic Press. pp. 203–228.</div>
+        <div class="pub-links">
+          <a href="#" class="pub-link">Book Link</a>
+        </div>
+      </div>
+
+      <div class="publication-item">
+        <div class="pub-meta">
+          <span class="badge badge-teal">Journal Article</span>
+          <span class="badge badge-grey">2022</span>
+        </div>
+        <div class="pub-title">Graduate Employability and Skills Mismatch: Evidence from Zambian Universities</div>
+        <div class="pub-authors">Mwale, G., Sinyangwe, I. & Phiri, L.</div>
+        <div class="pub-journal">International Journal of Educational Development, Vol. 90, pp. 1–12.</div>
+        <div class="pub-links">
+          <a href="#" class="pub-link" onclick="showToast('Downloading PDF…','success');return false;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            PDF
+          </a>
+          <a href="#" class="pub-link">DOI</a>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Ongoing Projects -->
+      <div class="section-header" style="margin-bottom:32px">
+        <p class="overline">Current Work</p>
+        <h2>Ongoing Research Projects</h2>
+      </div>
+      <div class="grid-2">
+        <div class="project-card">
+          <div class="project-status">
+            <div class="project-status-dot"></div>
+            In Progress
+          </div>
+          <h3>Digital Literacy & Education in Rural Zambia</h3>
+          <p>Investigating the impact of digital tools on learning outcomes in rural secondary schools, with policy recommendations for the Ministry of Education.</p>
+          <div class="project-tags">
+            <span class="project-tag">EdTech</span>
+            <span class="project-tag">Rural Development</span>
+            <span class="project-tag">Mixed Methods</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-status">
+            <div class="project-status-dot"></div>
+            In Progress
+          </div>
+          <h3>Public Expenditure Review: Education Sector 2015–2025</h3>
+          <p>A decade-long longitudinal analysis of government spending on education in Zambia, tracking efficiency, equity, and outcome metrics.</p>
+          <div class="project-tags">
+            <span class="project-tag">Public Finance</span>
+            <span class="project-tag">Econometrics</span>
+            <span class="project-tag">Policy Analysis</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Conference Presentations -->
+      <div class="section-header" style="margin-bottom:28px">
+        <p class="overline">Presentations</p>
+        <h2>Conference Presentations</h2>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:18px 24px;display:flex;gap:20px;align-items:flex-start">
+          <div style="flex-shrink:0;text-align:center;min-width:52px">
+            <div style="font-family:var(--font-serif);font-size:1.6rem;color:var(--teal);line-height:1">24</div>
+            <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-light)">Feb 2025</div>
+          </div>
+          <div>
+            <div style="font-weight:600;font-size:0.95rem;margin-bottom:3px">Rethinking Education Finance in Post-COVID Africa</div>
+            <div style="font-size:0.85rem;color:var(--text-light)">African Economic Research Consortium (AERC) Biannual Conference · Nairobi, Kenya</div>
+          </div>
+          <span class="badge badge-teal" style="margin-left:auto;flex-shrink:0">Keynote</span>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:18px 24px;display:flex;gap:20px;align-items:flex-start">
+          <div style="flex-shrink:0;text-align:center;min-width:52px">
+            <div style="font-family:var(--font-serif);font-size:1.6rem;color:var(--teal);line-height:1">11</div>
+            <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-light)">Sep 2024</div>
+          </div>
+          <div>
+            <div style="font-weight:600;font-size:0.95rem;margin-bottom:3px">Fiscal Decentralisation and School Performance: Panel Evidence</div>
+            <div style="font-size:0.85rem;color:var(--text-light)">Association for the Development of Education in Africa (ADEA) · Kigali, Rwanda</div>
+          </div>
+          <span class="badge badge-grey" style="margin-left:auto;flex-shrink:0">Paper</span>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--border);border-radius:8px;padding:18px 24px;display:flex;gap:20px;align-items:flex-start">
+          <div style="flex-shrink:0;text-align:center;min-width:52px">
+            <div style="font-family:var(--font-serif);font-size:1.6rem;color:var(--teal);line-height:1">03</div>
+            <div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-light)">Mar 2023</div>
+          </div>
+          <div>
+            <div style="font-weight:600;font-size:0.95rem;margin-bottom:3px">Graduate Skills Mismatch: A Zambian Perspective</div>
+            <div style="font-size:0.85rem;color:var(--text-light)">Southern African Economics Association Annual Conference · Harare, Zimbabwe</div>
+          </div>
+          <span class="badge badge-grey" style="margin-left:auto;flex-shrink:0">Paper</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div><!-- /page-research -->
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE: BLOG
+═══════════════════════════════════════════ -->
+<div id="page-blog" class="page">
+
+  <div id="blogList">
+    <div class="page-hero">
+      <div class="container">
+        <p class="overline" style="color:var(--gold);margin-bottom:12px">Perspectives</p>
+        <h1>Academic Blog</h1>
+        <p>Ideas, reflections, education discussions, and research updates.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="blog-filters" id="blogFilters">
+          <button class="filter-btn active" onclick="filterBlog('all',this)">All</button>
+          <button class="filter-btn" onclick="filterBlog('Education',this)">Education</button>
+          <button class="filter-btn" onclick="filterBlog('Research',this)">Research</button>
+          <button class="filter-btn" onclick="filterBlog('Policy',this)">Policy</button>
+          <button class="filter-btn" onclick="filterBlog('Technology',this)">Technology</button>
+          <button class="filter-btn" onclick="filterBlog('Reflections',this)">Reflections</button>
+        </div>
+
+        <div class="blog-layout">
+          <div>
+            <div id="blogPosts">
+              <!-- Blog posts rendered by JS -->
+            </div>
+          </div>
+
+          <aside>
+            <div class="sidebar-widget">
+              <h4>Search Posts</h4>
+              <div class="form-group" style="margin-bottom:0">
+                <input type="text" class="form-input" placeholder="Search articles…" oninput="filterBlogBySearch(this.value)">
+              </div>
+            </div>
+            <div class="sidebar-widget">
+              <h4>Categories</h4>
+              <div class="category-list">
+                <div class="category-item" onclick="filterBlog('Education',null)"><span>Education</span><span class="category-count">4</span></div>
+                <div class="category-item" onclick="filterBlog('Research',null)"><span>Research</span><span class="category-count">3</span></div>
+                <div class="category-item" onclick="filterBlog('Policy',null)"><span>Policy</span><span class="category-count">3</span></div>
+                <div class="category-item" onclick="filterBlog('Technology',null)"><span>Technology</span><span class="category-count">2</span></div>
+                <div class="category-item" onclick="filterBlog('Reflections',null)"><span>Reflections</span><span class="category-count">2</span></div>
+              </div>
+            </div>
+            <div class="sidebar-widget">
+              <h4>Tags</h4>
+              <div class="tag-cloud">
+                <span class="tag-item">Zambia</span><span class="tag-item">Africa</span><span class="tag-item">Higher Education</span><span class="tag-item">Economics</span><span class="tag-item">Pedagogy</span><span class="tag-item">Assessment</span><span class="tag-item">Curriculum</span><span class="tag-item">EdTech</span><span class="tag-item">Development</span><span class="tag-item">Policy</span>
+              </div>
+            </div>
+            <div class="sidebar-widget">
+              <h4>Stay Connected</h4>
+              <p style="font-size:0.85rem;color:var(--text-light);margin-bottom:12px">Get notified about new posts and announcements.</p>
+              <input type="email" class="form-input mb-4" placeholder="Your email address" style="margin-bottom:10px">
+              <button class="btn btn-primary" style="width:100%;justify-content:center" onclick="showToast('Subscribed successfully!','success')">Subscribe</button>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Single Blog Post View -->
+  <div id="blogPost" style="display:none">
+    <div class="blog-post-hero">
+      <div class="container">
+        <button onclick="closeBlogPost()" style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-bottom:20px;display:flex;align-items:center;gap:6px;background:none;border:none;cursor:pointer;">← Back to Blog</button>
+        <div id="postHeroContent"></div>
+      </div>
+    </div>
+    <div class="blog-post-body" id="postBody"></div>
+  </div>
+
+</div><!-- /page-blog -->
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE: TEACHING
+═══════════════════════════════════════════ -->
+<div id="page-teaching" class="page">
+
+  <div class="page-hero">
+    <div class="container">
+      <p class="overline" style="color:var(--gold);margin-bottom:12px">Learning Hub</p>
+      <h1>Teaching Resources</h1>
+      <p>Course notes, lecture slides, assignments, and study materials — organised for easy access.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <!-- Year/Semester Nav -->
+      <div class="resources-nav mb-6" id="resourcesNav">
+        <button class="resources-nav-btn active" onclick="switchResources('all',this)">All Courses</button>
+        <button class="resources-nav-btn" onclick="switchResources('year1',this)">Year 1</button>
+        <button class="resources-nav-btn" onclick="switchResources('year2',this)">Year 2</button>
+        <button class="resources-nav-btn" onclick="switchResources('year3',this)">Year 3</button>
+        <button class="resources-nav-btn" onclick="switchResources('postgrad',this)">Postgraduate</button>
+      </div>
+
+      <!-- ECON 101 -->
+      <div class="course-section" data-year="year1">
+        <div class="course-header">
+          <div class="course-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>
+          </div>
+          <div>
+            <h3>ECON 101 — Introduction to Economics</h3>
+            <p>Year 1 · Semester 1 · 2025/2026</p>
+          </div>
+          <span class="badge badge-teal" style="margin-left:auto">5 Files</span>
+        </div>
+        <div class="course-files">
+          <div class="file-item">
+            <div class="file-type-icon file-type-pdf">PDF</div>
+            <div class="file-info">
+              <div class="file-name">Week 1 – Introduction to Economic Thinking.pdf</div>
+              <div class="file-meta">Uploaded 10 Jan 2026 · 1.2 MB</div>
+            </div>
+            <button class="file-download" onclick="showToast('Downloading file…','success')">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download
+            </button>
+          </div>
+          <div class="file-item">
+            <div class="file-type-icon file-type-ppt">PPT</div>
+            <div class="file-info">
+              <div class="file-name">Week 2 – Supply and Demand Slides.pptx</div>
+              <div class="file-meta">Uploaded 17 Jan 2026 · 3.8 MB</div>
+            </div>
+            <button class="file-download" onclick="showToast('Downloading file…','success')">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download
+            </button>
+          </div>
+          <div class="file-item">
+            <div class="file-type-icon file-type-doc">DOC</div>
+            <div class="file-info">
+              <div class="file-name">Assignment 1 – Market Structures Analysis.docx</div>
+              <div class="file-meta">Uploaded 24 Jan 2026 · Due 14 Feb 2026</div>
+            </div>
+            <button class="file-download" onclick="showToast('Downloading file…','success')">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download
+            </button>
+          </div>
+          <div class="file-item">
+            <div class="file-type-icon file-type-pdf">PDF</div>
+            <div class="file-info">
+              <div class="file-name">Mid-Term Study Guide – ECON 101.pdf</div>
+              <div class="file-meta">Uploaded 31 Jan 2026 · 920 KB</div>
+            </div>
+            <button class="file-download" onclick="showToast('Downloading file…','success')">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ECON 301 -->
+      <div class="course-section" data-year="year3">
+        <div class="course-header">
+          <div class="course-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div>
+            <h3>ECON 301 — Development Economics</h3>
+            <p>Year 3 · Semester 1 · 2025/2026</p>
+          </div>
+          <span class="badge badge-teal" style="margin-left:auto">6 Files</span>
+        </div>
+        <div class="course-files">
+          <div class="file-item">
+            <div class="file-type-icon file-type-pdf">PDF</div>
+            <div class="file-info">
+              <div class="file-name">Lecture Notes – Growth Theory & Developing Countries.pdf</div>
+              <div class="file-meta">Uploaded 08 Jan 2026 · 2.4 MB</div>
+            </div>
+            <button class="file-download" onclick="showToast('Downloading file…','success')">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download
+            </button>
+          </div>
+          <div class="file-item">
+            <div class="file-type-icon file-type-ppt">PPT</div>
+            <div class="file-info">
+              <div class="file-name">Module 3 – Human Capital & Poverty Traps.pptx</div>
+              <div class="file-meta">Uploaded 22 Jan 2026 · 5.1 MB</div>
+            </div>
+            <button class="file-download" onclick="showToast('Downloading file…','success')">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download
+            </button>
+          </div>
+          <div class="file-item">
+            <div class="file-type-icon file-type-doc">DOC</div>
+            <div class="file-info">
+              <div class="file-name">Research Paper Guidelines – ECON 301.docx</div>
+              <div class="file-meta">Uploaded 29 Jan 2026 · 340 KB</div>
+            </div>
+            <button class="file-download" onclick="showToast('Downloading file…','success')">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ECON 402 -->
+      <div class="course-section" data-year="postgrad">
+        <div class="course-header">
+          <div class="course-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <div>
+            <h3>ECON 402 — Research Methodology (Postgraduate)</h3>
+            <p>Masters Level · Semester 1 · 2025/2026</p>
+          </div>
+          <span class="badge badge-gold" style="margin-left:auto">Postgrad</span>
+        </div>
+        <div class="course-files">
+          <div class="file-item">
+            <div class="file-type-icon file-type-pdf">PDF</div>
+            <div class="file-info">
+              <div class="file-name">Introduction to Quantitative Research Design.pdf</div>
+              <div class="file-meta">Uploaded 05 Jan 2026 · 3.2 MB</div>
+            </div>
+            <button class="file-download" onclick="showToast('Downloading file…','success')">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download
+            </button>
+          </div>
+          <div class="file-item">
+            <div class="file-type-icon file-type-pdf">PDF</div>
+            <div class="file-info">
+              <div class="file-name">Econometrics Primer – Panel Data Methods.pdf</div>
+              <div class="file-meta">Uploaded 12 Jan 2026 · 4.7 MB</div>
+            </div>
+            <button class="file-download" onclick="showToast('Downloading file…','success')">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STUDENT NOTES SUBMISSION -->
+      <div class="divider"></div>
+      <div class="submission-wrap">
+        <h3>📤 Submit Student Notes</h3>
+        <p>Students can contribute quality notes and learning materials. Submitted content is reviewed before publishing.</p>
+        <form class="submit-form" onsubmit="handleNoteSubmit(event)">
+          <div class="submission-grid">
+            <div class="form-group">
+              <label class="form-label">Full Name *</label>
+              <input type="text" class="form-input" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Student ID</label>
+              <input type="text" class="form-input" placeholder="Student ID number">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Course Name *</label>
+              <select class="form-select" required>
+                <option value="">Select a course…</option>
+                <option>ECON 101 – Introduction to Economics</option>
+                <option>ECON 201 – Macroeconomics I</option>
+                <option>ECON 301 – Development Economics</option>
+                <option>ECON 402 – Research Methodology</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Semester *</label>
+              <select class="form-select" required>
+                <option value="">Select semester…</option>
+                <option>Semester 1 – 2025/2026</option>
+                <option>Semester 2 – 2025/2026</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Topic / Title *</label>
+            <input type="text" class="form-input" placeholder="e.g. Week 4 – GDP and National Accounts" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Upload File *</label>
+            <div class="upload-area" onclick="document.getElementById('noteFile').click()">
+              <div class="upload-icon">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              </div>
+              <div class="upload-text">
+                <span>Click to browse</span> or drag and drop your file here<br>
+                <small>PDF, DOCX, PPTX — Max 10 MB</small>
+              </div>
+              <input type="file" id="noteFile" style="display:none" accept=".pdf,.doc,.docx,.ppt,.pptx">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Submit Notes for Review
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+</div><!-- /page-teaching -->
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE: CONTACT
+═══════════════════════════════════════════ -->
+<div id="page-contact" class="page">
+
+  <div class="page-hero">
+    <div class="container">
+      <p class="overline" style="color:var(--gold);margin-bottom:12px">Get in Touch</p>
+      <h1>Contact</h1>
+      <p>For academic collaborations, student queries, media enquiries, or general correspondence.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <h2 class="mb-6" style="font-size:1.6rem">Let's Connect</h2>
+
+          <div class="contact-info">
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="contact-card-label">Email</div>
+                <div class="contact-card-value"><a href="mailto:gershom@gershommwale.com">gershom@gershommwale.com</a></div>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div class="contact-card-label">Office</div>
+                <div class="contact-card-value">Department of Economics, University of Zambia, Great East Road, Lusaka</div>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <div>
+                <div class="contact-card-label">Office Hours</div>
+                <div class="contact-card-value">Mon & Wed 10:00–12:00 · Tue & Thu 14:00–17:00</div>
+              </div>
+            </div>
+          </div>
+
+          <h4 class="mt-8 mb-4" style="font-family:var(--font-sans);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-light)">Professional Profiles</h4>
+          <div class="social-links-grid">
+            <a href="#" class="social-link-card" onclick="showToast('Opening LinkedIn…','success');return false;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <a href="#" class="social-link-card" onclick="showToast('Opening Google Scholar…','success');return false;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>
+              Google Scholar
+            </a>
+            <a href="#" class="social-link-card" onclick="showToast('Opening ResearchGate…','success');return false;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              ResearchGate
+            </a>
+            <a href="#" class="social-link-card" onclick="showToast('Opening GitHub…','success');return false;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <h3>Send a Message</h3>
+          <form onsubmit="handleContactSubmit(event)">
+            <div class="form-group">
+              <label class="form-label">Full Name *</label>
+              <input type="text" class="form-input" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-input" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Subject</label>
+              <select class="form-select">
+                <option>General Enquiry</option>
+                <option>Research Collaboration</option>
+                <option>Student Query</option>
+                <option>Media / Press</option>
+                <option>Speaking Invitation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message *</label>
+              <textarea class="form-textarea" placeholder="Write your message here…" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+              Send Message →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div><!-- /page-contact -->
+
+
+<!-- ═══════════════════════════════════════════
+     PAGE: ADMIN
+═══════════════════════════════════════════ -->
+<div id="page-admin" class="page">
+
+  <!-- Admin Login -->
+  <div id="adminLogin" style="min-height:calc(100vh - 68px);display:flex;align-items:center;justify-content:center;background:var(--cream)">
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:48px;width:100%;max-width:420px;text-align:center">
+      <div style="width:56px;height:56px;background:rgba(13,27,42,0.06);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:var(--navy)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      </div>
+      <h2 style="font-size:1.6rem;margin-bottom:6px">Admin Dashboard</h2>
+      <p style="color:var(--text-light);font-size:0.9rem;margin-bottom:28px">Enter your credentials to access the control panel.</p>
+      <form onsubmit="adminLogin(event)">
+        <div class="form-group">
+          <input type="email" class="form-input" placeholder="Email address" value="admin@gershommwale.com" required>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-input" placeholder="Password" value="••••••••" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:8px">
+          Sign In →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard (hidden until login) -->
+  <div id="adminDashboard" style="display:none">
+    <div class="admin-layout">
+      <div class="admin-sidebar">
+        <div class="admin-sidebar-header">
+          <h4>Admin Panel</h4>
+          <p>gershom@gershommwale.com</p>
+        </div>
+        <nav>
+          <div class="admin-nav-item active" onclick="adminNav('overview',this)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            Overview
+          </div>
+          <div class="admin-nav-item" onclick="adminNav('posts',this)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Blog Posts
+          </div>
+          <div class="admin-nav-item" onclick="adminNav('resources',this)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>
+            Teaching Resources
+          </div>
+          <div class="admin-nav-item" onclick="adminNav('notes',this)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/></svg>
+            Student Notes
+          </div>
+          <div class="admin-nav-item" onclick="adminNav('messages',this)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Messages
+          </div>
+          <div class="admin-nav-item" onclick="showPage('home');document.getElementById('adminDashboard').style.display='none';document.getElementById('adminLogin').style.display='flex'">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            Sign Out
+          </div>
+        </nav>
+      </div>
+
+      <div class="admin-main">
+
+        <!-- Overview Panel -->
+        <div id="admin-overview">
+          <div class="admin-header">
+            <h2>Dashboard Overview</h2>
+            <p>Welcome back, Gershom. Here's a snapshot of your site activity.</p>
+          </div>
+          <div class="admin-stats-row">
+            <div class="admin-stat">
+              <div class="admin-stat-label">Blog Posts</div>
+              <div class="admin-stat-num">8</div>
+              <div class="admin-stat-change">↑ 2 this month</div>
+            </div>
+            <div class="admin-stat">
+              <div class="admin-stat-label">Resources</div>
+              <div class="admin-stat-num">14</div>
+              <div class="admin-stat-change">↑ 3 this week</div>
+            </div>
+            <div class="admin-stat">
+              <div class="admin-stat-label">Pending Notes</div>
+              <div class="admin-stat-num">3</div>
+              <div class="admin-stat-change" style="color:#fd7e14">Awaiting review</div>
+            </div>
+            <div class="admin-stat">
+              <div class="admin-stat-label">Messages</div>
+              <div class="admin-stat-num">5</div>
+              <div class="admin-stat-change" style="color:#fd7e14">2 unread</div>
+            </div>
+          </div>
+
+          <!-- Pending Student Notes -->
+          <div class="admin-section">
+            <div class="admin-section-header">
+              <h3>Pending Student Notes</h3>
+              <span class="badge badge-gold">3 Awaiting Review</span>
+            </div>
+            <div class="admin-section-body">
+              <div class="pending-note">
+                <div class="pending-note-info">
+                  <div class="pending-note-title">Week 5 – Aggregate Demand & AS-AD Model</div>
+                  <div class="pending-note-meta">Submitted by Natasha Banda · ECON 201 · Semester 1 · 12 Mar 2026</div>
+                </div>
+                <div class="pending-note-actions">
+                  <button class="action-btn" onclick="showToast('Notes approved and published!','success')">Approve</button>
+                  <button class="action-btn danger" onclick="showToast('Notes declined.','error')">Decline</button>
+                </div>
+              </div>
+              <div class="pending-note">
+                <div class="pending-note-info">
+                  <div class="pending-note-title">Human Capital Theory – Summary Notes</div>
+                  <div class="pending-note-meta">Submitted by James Phiri · ECON 301 · Semester 1 · 10 Mar 2026</div>
+                </div>
+                <div class="pending-note-actions">
+                  <button class="action-btn" onclick="showToast('Notes approved and published!','success')">Approve</button>
+                  <button class="action-btn danger" onclick="showToast('Notes declined.','error')">Decline</button>
+                </div>
+              </div>
+              <div class="pending-note">
+                <div class="pending-note-info">
+                  <div class="pending-note-title">Econometrics – OLS Regression Cheat Sheet</div>
+                  <div class="pending-note-meta">Submitted by Grace Tembo · ECON 402 · Semester 1 · 08 Mar 2026</div>
+                </div>
+                <div class="pending-note-actions">
+                  <button class="action-btn" onclick="showToast('Notes approved and published!','success')">Approve</button>
+                  <button class="action-btn danger" onclick="showToast('Notes declined.','error')">Decline</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recent Messages -->
+          <div class="admin-section">
+            <div class="admin-section-header">
+              <h3>Recent Contact Messages</h3>
+              <button class="btn btn-sm btn-outline" onclick="adminNav('messages',null)">View All</button>
+            </div>
+            <div class="admin-section-body" style="padding:0">
+              <table class="admin-table">
+                <thead>
+                  <tr><th>From</th><th>Subject</th><th>Date</th><th>Status</th><th>Action</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Dr. Sarah Mulenga</td>
+                    <td>Research Collaboration</td>
+                    <td>13 Mar 2026</td>
+                    <td><span class="status-pill status-pending">Unread</span></td>
+                    <td><button class="action-btn" onclick="showToast('Opening message…','success')">Open</button></td>
+                  </tr>
+                  <tr>
+                    <td>Emmanuel Zulu</td>
+                    <td>Student Query – ECON 301</td>
+                    <td>12 Mar 2026</td>
+                    <td><span class="status-pill status-approved">Read</span></td>
+                    <td><button class="action-btn" onclick="showToast('Opening message…','success')">Open</button></td>
+                  </tr>
+                  <tr>
+                    <td>AERC Nairobi</td>
+                    <td>Speaking Invitation</td>
+                    <td>10 Mar 2026</td>
+                    <td><span class="status-pill status-pending">Unread</span></td>
+                    <td><button class="action-btn" onclick="showToast('Opening message…','success')">Open</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog Posts Panel -->
+        <div id="admin-posts" style="display:none">
+          <div class="admin-header" style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:16px">
+            <div>
+              <h2>Blog Posts</h2>
+              <p>Create, edit, and manage your blog articles.</p>
+            </div>
+            <button class="btn btn-primary" onclick="showNewPostForm()">+ New Post</button>
+          </div>
+
+          <div id="newPostForm" style="display:none" class="admin-section" style="margin-bottom:24px">
+            <div class="admin-section-header">
+              <h3>New Blog Post</h3>
+              <button onclick="document.getElementById('newPostForm').style.display='none'" style="color:var(--text-light);font-size:1.2rem;cursor:pointer">×</button>
+            </div>
+            <div class="admin-section-body">
+              <div class="grid-2" style="margin-bottom:16px">
+                <div class="form-group"><label class="form-label">Post Title</label><input type="text" class="form-input" placeholder="Enter post title…"></div>
+                <div class="form-group"><label class="form-label">Category</label><select class="form-select"><option>Education</option><option>Research</option><option>Policy</option><option>Technology</option><option>Reflections</option></select></div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Excerpt</label>
+                <input type="text" class="form-input" placeholder="Short description for preview…">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Content</label>
+                <div class="editor-area">
+                  <div class="editor-toolbar">
+                    <button class="editor-tool">B</button>
+                    <button class="editor-tool" style="font-style:italic">I</button>
+                    <button class="editor-tool" style="text-decoration:underline">U</button>
+                    <button class="editor-tool">H2</button>
+                    <button class="editor-tool">H3</button>
+                    <button class="editor-tool">""</button>
+                    <button class="editor-tool">≡</button>
+                    <button class="editor-tool">🔗</button>
+                    <button class="editor-tool">IMG</button>
+                  </div>
+                  <textarea class="editor-content" placeholder="Write your post content here… Markdown supported."></textarea>
+                </div>
+              </div>
+              <div style="display:flex;gap:12px">
+                <button class="btn btn-primary" onclick="showToast('Post saved as draft!','success')">Save Draft</button>
+                <button class="btn btn-gold" onclick="showToast('Post published successfully!','success')">Publish</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-section">
+            <div class="admin-section-header"><h3>All Posts</h3></div>
+            <div style="padding:0">
+              <table class="admin-table">
+                <thead>
+                  <tr><th>Title</th><th>Category</th><th>Date</th><th>Status</th><th>Actions</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight:500">Rethinking Assessment in Higher Education</td>
+                    <td><span class="badge badge-teal">Education</span></td>
+                    <td>12 Mar 2026</td>
+                    <td><span class="status-pill status-published">Published</span></td>
+                    <td>
+                      <button class="action-btn" onclick="showToast('Opening editor…','success')">Edit</button>
+                      <button class="action-btn danger" onclick="showToast('Post deleted.','error')">Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:500">Data Literacy as an Emerging Core Skill</td>
+                    <td><span class="badge badge-navy">Research</span></td>
+                    <td>28 Feb 2026</td>
+                    <td><span class="status-pill status-published">Published</span></td>
+                    <td>
+                      <button class="action-btn" onclick="showToast('Opening editor…','success')">Edit</button>
+                      <button class="action-btn danger" onclick="showToast('Post deleted.','error')">Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight:500">Draft: The Future of EdTech in Africa</td>
+                    <td><span class="badge badge-grey">Technology</span></td>
+                    <td>05 Mar 2026</td>
+                    <td><span class="status-pill status-draft">Draft</span></td>
+                    <td>
+                      <button class="action-btn" onclick="showToast('Opening editor…','success')">Edit</button>
+                      <button class="action-btn" onclick="showToast('Post published!','success')">Publish</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resources Panel -->
+        <div id="admin-resources" style="display:none">
+          <div class="admin-header" style="display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:16px">
+            <div><h2>Teaching Resources</h2><p>Upload and manage course materials.</p></div>
+            <button class="btn btn-primary" onclick="showToast('Upload dialog opened','success')">+ Upload Material</button>
+          </div>
+          <div class="admin-section">
+            <div class="admin-section-header"><h3>Upload New Material</h3></div>
+            <div class="admin-section-body">
+              <div class="grid-2">
+                <div class="form-group"><label class="form-label">Course</label><select class="form-select"><option>ECON 101</option><option>ECON 201</option><option>ECON 301</option><option>ECON 402</option></select></div>
+                <div class="form-group"><label class="form-label">Material Type</label><select class="form-select"><option>Lecture Notes</option><option>Slides</option><option>Assignment</option><option>Study Guide</option><option>Past Exam</option></select></div>
+                <div class="form-group"><label class="form-label">Title</label><input type="text" class="form-input" placeholder="e.g. Week 6 – Inflation Theory"></div>
+                <div class="form-group"><label class="form-label">Semester</label><select class="form-select"><option>Semester 1 – 2025/2026</option><option>Semester 2 – 2025/2026</option></select></div>
+              </div>
+              <div class="file-upload-admin" onclick="showToast('File browser opened','success')">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--teal)" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                <p style="margin-top:8px;font-size:0.88rem;color:var(--text-light)">Click to upload file or drag and drop</p>
+              </div>
+              <button class="btn btn-primary mt-4" onclick="showToast('Material uploaded successfully!','success')">Upload Material</button>
+            </div>
+          </div>
+          <div class="admin-section">
+            <div class="admin-section-header"><h3>All Materials</h3></div>
+            <div style="padding:0">
+              <table class="admin-table">
+                <thead><tr><th>File</th><th>Course</th><th>Type</th><th>Uploaded</th><th>Actions</th></tr></thead>
+                <tbody>
+                  <tr><td>Week 1 – Intro to Economic Thinking.pdf</td><td>ECON 101</td><td>Notes</td><td>10 Jan 2026</td><td><button class="action-btn danger" onclick="showToast('File deleted.','error')">Delete</button></td></tr>
+                  <tr><td>Week 2 – Supply and Demand Slides.pptx</td><td>ECON 101</td><td>Slides</td><td>17 Jan 2026</td><td><button class="action-btn danger" onclick="showToast('File deleted.','error')">Delete</button></td></tr>
+                  <tr><td>Growth Theory Lecture Notes.pdf</td><td>ECON 301</td><td>Notes</td><td>08 Jan 2026</td><td><button class="action-btn danger" onclick="showToast('File deleted.','error')">Delete</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Student Notes Panel -->
+        <div id="admin-notes" style="display:none">
+          <div class="admin-header"><h2>Student Notes Review</h2><p>Review and approve student-submitted learning materials.</p></div>
+          <div class="admin-section">
+            <div class="admin-section-header"><h3>Pending Submissions</h3><span class="badge badge-gold">3 Pending</span></div>
+            <div style="padding:0">
+              <table class="admin-table">
+                <thead><tr><th>Student</th><th>Title</th><th>Course</th><th>Submitted</th><th>Status</th><th>Actions</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td>Natasha Banda</td>
+                    <td>AS-AD Model Notes – Week 5</td>
+                    <td>ECON 201</td>
+                    <td>12 Mar 2026</td>
+                    <td><span class="status-pill status-pending">Pending</span></td>
+                    <td>
+                      <button class="action-btn" onclick="showToast('Notes reviewed!','success')">Preview</button>
+                      <button class="action-btn" onclick="showToast('Notes approved!','success')">Approve</button>
+                      <button class="action-btn danger" onclick="showToast('Notes declined.','error')">Decline</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>James Phiri</td>
+                    <td>Human Capital Theory Summary</td>
+                    <td>ECON 301</td>
+                    <td>10 Mar 2026</td>
+                    <td><span class="status-pill status-pending">Pending</span></td>
+                    <td>
+                      <button class="action-btn" onclick="showToast('Notes reviewed!','success')">Preview</button>
+                      <button class="action-btn" onclick="showToast('Notes approved!','success')">Approve</button>
+                      <button class="action-btn danger" onclick="showToast('Notes declined.','error')">Decline</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Messages Panel -->
+        <div id="admin-messages" style="display:none">
+          <div class="admin-header"><h2>Contact Messages</h2><p>Messages received via the contact form.</p></div>
+          <div class="admin-section">
+            <div style="padding:0">
+              <table class="admin-table">
+                <thead><tr><th>From</th><th>Email</th><th>Subject</th><th>Date</th><th>Status</th><th>Actions</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td>Dr. Sarah Mulenga</td>
+                    <td style="color:var(--teal)">sarah@unza.zm</td>
+                    <td>Research Collaboration</td>
+                    <td>13 Mar 2026</td>
+                    <td><span class="status-pill status-pending">Unread</span></td>
+                    <td><button class="action-btn" onclick="showToast('Opening message…','success')">Open</button></td>
+                  </tr>
+                  <tr>
+                    <td>Emmanuel Zulu</td>
+                    <td style="color:var(--teal)">e.zulu@student.unza.zm</td>
+                    <td>Query – ECON 301</td>
+                    <td>12 Mar 2026</td>
+                    <td><span class="status-pill status-approved">Read</span></td>
+                    <td><button class="action-btn" onclick="showToast('Opening message…','success')">Open</button></td>
+                  </tr>
+                  <tr>
+                    <td>AERC Secretariat</td>
+                    <td style="color:var(--teal)">events@aercafrica.org</td>
+                    <td>Speaking Invitation – Nairobi 2026</td>
+                    <td>10 Mar 2026</td>
+                    <td><span class="status-pill status-pending">Unread</span></td>
+                    <td><button class="action-btn" onclick="showToast('Opening message…','success')">Open</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /admin-main -->
+    </div><!-- /admin-layout -->
+  </div><!-- /adminDashboard -->
+
+</div><!-- /page-admin -->
+
+
+<!-- ═══════════════════════════════════════════
+     FOOTER (shown on all public pages)
+═══════════════════════════════════════════ -->
+<footer id="mainFooter">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Gershom Mwale</h3>
+        <p>Lecturer, Researcher & Academic Mentor based in Lusaka, Zambia. Committed to advancing scholarship and empowering students across Africa.</p>
+        <div class="footer-social mt-6">
+          <a href="#" class="footer-social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="#" class="footer-social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="#" class="footer-social-icon">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <div class="footer-links">
+          <a href="#" onclick="showPage('home')">Home</a>
+          <a href="#" onclick="showPage('about')">About</a>
+          <a href="#" onclick="showPage('research')">Research</a>
+          <a href="#" onclick="showPage('blog')">Blog</a>
+          <a href="#" onclick="showPage('teaching')">Teaching Resources</a>
+          <a href="#" onclick="showPage('contact')">Contact</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Research</h4>
+        <div class="footer-links">
+          <a href="#">Publications</a>
+          <a href="#">Ongoing Projects</a>
+          <a href="#">Conference Presentations</a>
+          <a href="#">Google Scholar</a>
+          <a href="#">ResearchGate</a>
+          <a href="#">ORCID Profile</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-links">
+          <a href="mailto:gershom@gershommwale.com">gershom@gershommwale.com</a>
+          <a href="#">University of Zambia</a>
+          <a href="#">Office Hours</a>
+          <a href="#" onclick="showToast('CV download coming soon.','success')">Download CV</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Gershom Mwale · gershommwale.com · All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Sitemap</a>
+        <a href="#" onclick="showPage('admin')">Admin</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════ -->
+<script>
+/* ─── DATA ─── */
+const blogPosts = [
+  {
+    id: 1,
+    title: 'Rethinking Assessment in Higher Education',
+    excerpt: 'How universities in Sub-Saharan Africa can move beyond rote examination towards critical thinking and competency-based assessment frameworks that better prepare graduates for the modern economy.',
+    category: 'Education',
+    date: '12 Mar 2026',
+    readTime: '6 min read',
+    emoji: '✍',
+    body: `<h2>The Problem with Traditional Examinations</h2>
+<p>Across Sub-Saharan African universities, the end-of-semester closed-book examination remains the dominant mode of student assessment. While this approach offers standardisation and ease of administration, it increasingly fails to capture the complex competencies that graduates need to thrive in today's knowledge economy.</p>
+<p>Consider what a typical university examination tests: memory recall under time pressure. Compare this with what employers in Lusaka, Nairobi, or Johannesburg actually want: critical analysis, problem-solving, communication, and adaptability. The gap is striking — and costly.</p>
+<blockquote>Assessment should not be a hurdle at the end of learning. It should be woven into the fabric of the learning journey itself.</blockquote>
+<h2>Towards Competency-Based Assessment</h2>
+<p>Competency-based education (CBE) shifts the focus from seat time and examination scores to demonstrated mastery of specific skills and knowledge. In this model, students progress by demonstrating what they can do, not simply what they know in a particular moment.</p>
+<p>Several leading African universities — including the University of Cape Town and Strathmore University in Nairobi — have begun piloting portfolio-based assessments, project-based learning modules, and oral defence examinations. Early results suggest improvements in both student engagement and graduate readiness.</p>
+<h2>Recommendations for Zambian Universities</h2>
+<p>Based on my research and classroom experience, I propose three practical reforms: first, introduce continuous assessment that counts for at least 50% of final grades; second, replace a portion of written exams with practical projects tied to real-world problems; and third, invest in lecturer training for alternative assessment design.</p>`
+  },
+  {
+    id: 2,
+    title: 'Data Literacy as an Emerging Core Skill',
+    excerpt: 'Why every student — regardless of discipline — needs to understand data, and how educators can integrate data literacy across all curricula to prepare graduates for the digital economy.',
+    category: 'Research',
+    date: '28 Feb 2026',
+    readTime: '8 min read',
+    emoji: '📊',
+    body: `<h2>Why Data Literacy Matters Now</h2>
+<p>We are producing more data than at any point in human history. From mobile payment records and satellite imagery to hospital admissions and agricultural yield data, every sector of the economy is swimming in information. The critical shortage is not data — it is the human capacity to make sense of it.</p>
+<p>Data literacy — the ability to read, understand, create, and communicate data as information — is rapidly becoming a foundational competency, akin to traditional literacy and numeracy. Yet most African university curricula still treat data analysis as the exclusive domain of statistics and mathematics students.</p>
+<h2>A Cross-Disciplinary Imperative</h2>
+<p>A social work student analysing poverty data. A nursing student interpreting epidemiological charts. A law student reviewing evidence from digital forensics. An agricultural student comparing crop yield statistics across regions. None of these students is a "data scientist" — but all of them need meaningful data literacy.</p>
+<blockquote>Data literacy is not about turning everyone into a statistician. It is about ensuring every graduate can engage critically with quantitative information.</blockquote>
+<h2>How Educators Can Respond</h2>
+<p>The pathway to institution-wide data literacy begins with faculty development. Lecturers across disciplines need support to integrate data exercises into existing courses, using tools like Excel, basic R, or Google Data Studio. My department has introduced a one-week data module in our development economics course, and the student feedback has been overwhelmingly positive.</p>`
+  },
+  {
+    id: 3,
+    title: 'Education Policy Gaps in Post-Colonial Africa',
+    excerpt: 'A critical examination of how historical legacies continue to shape education policy, and what genuine reform looks like in the Zambian and broader African context.',
+    category: 'Policy',
+    date: '15 Feb 2026',
+    readTime: '10 min read',
+    emoji: '🌍',
+    body: `<h2>The Colonial Inheritance</h2>
+<p>African education systems were largely designed by colonial administrations to serve colonial purposes — producing clerks and administrators for the empire, not independent thinkers and national leaders. When independence came, the structures remained. The curricula changed incrementally, but the fundamental architecture — centralised control, examination-driven progression, English or French as the medium of instruction — was largely preserved.</p>
+<p>Sixty years after independence, Zambia's education system still bears these imprints in profound ways. The heavy reliance on expatriate textbooks, the marginalisation of indigenous languages in formal education, the concentration of quality institutions in Lusaka while rural areas remain underserved — these are not accidents. They are the accumulated weight of history.</p>
+<h2>What Genuine Reform Requires</h2>
+<p>Genuine education reform in post-colonial Africa requires more than tweaking curricula or upgrading infrastructure, though both matter. It requires a fundamental rethinking of what education is for — who it serves, whose knowledge it validates, and what vision of development it embodies.</p>
+<blockquote>Reform that merely modernises the colonial school is not transformation. Transformation requires asking whose knowledge counts, and restructuring accordingly.</blockquote>
+<h2>The Zambian Context</h2>
+<p>Zambia's Education and Training Sector Investment Plan (ETSIP) represents genuine ambition, but implementation has lagged behind aspiration. The recent introduction of local language instruction in early grades is a significant positive step — one supported by extensive research on mother-tongue-based multilingual education. What remains to be done is equally significant: investing in rural teachers, reforming assessment, and building research capacity within Zambian institutions themselves.</p>`
+  },
+  {
+    id: 4,
+    title: 'The Role of Universities in Economic Development',
+    excerpt: 'Exploring how African universities can become genuine engines of economic transformation rather than credentialing institutions — and what this demands from academics, governments, and the private sector.',
+    category: 'Education',
+    date: '01 Feb 2026',
+    readTime: '7 min read',
+    emoji: '🏛',
+    body: `<h2>Beyond Credentialism</h2>
+<p>The dominant narrative around universities in Africa frames them primarily as credentialing institutions — places where students earn certificates that signal employability to employers. This framing, while not entirely wrong, significantly undersells what universities can and should be doing for economic development.</p>
+<p>The East Asian economic miracle of the late 20th century was not driven by raw materials alone. It was driven by deliberate investment in human capital, technical expertise, and research and development — much of it anchored in universities that were genuine engines of knowledge production.</p>`
+  },
+  {
+    id: 5,
+    title: 'Open Access and African Scholarship',
+    excerpt: 'Why the paywall problem disproportionately harms African researchers and what the continental academic community can do to build genuinely open knowledge systems.',
+    category: 'Research',
+    date: '18 Jan 2026',
+    readTime: '5 min read',
+    emoji: '🔓',
+    body: `<h2>The Paywall Problem</h2>
+<p>A researcher at the University of Zambia trying to access a leading economics journal may face a paywall of $35–50 per article. Her counterpart at Harvard downloads the same article for free via institutional access. This asymmetry is not a minor inconvenience — it is a structural barrier that systematically disadvantages African scholars.</p>
+<p>Research is cumulative. Scholars build on what has come before. When African researchers cannot access the global literature, they cannot engage with it, critique it, or build on it. The result is a kind of epistemic exclusion that perpetuates the very dependency relationships that African universities were established to overcome.</p>`
+  }
+];
+
+let currentFilter = 'all';
+
+/* ─── PAGE ROUTING ─── */
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const page = document.getElementById('page-' + name);
+  if (page) {
+    page.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  // Update nav active state
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.classList.toggle('active', a.dataset.page === name);
+  });
+  // Show/hide footer
+  const footer = document.getElementById('mainFooter');
+  footer.style.display = name === 'admin' ? 'none' : 'block';
+
+  // Init blog
+  if (name === 'blog') renderBlogPosts();
+}
+
+/* ─── MOBILE MENU ─── */
+function toggleMobileMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+function closeMobileMenu() {
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+
+/* ─── BLOG ─── */
+function renderBlogPosts(filter, search) {
+  const container = document.getElementById('blogPosts');
+  let posts = blogPosts;
+  if (filter && filter !== 'all') posts = posts.filter(p => p.category === filter);
+  if (search) {
+    const q = search.toLowerCase();
+    posts = posts.filter(p => p.title.toLowerCase().includes(q) || p.excerpt.toLowerCase().includes(q));
+  }
+  container.innerHTML = posts.map(p => `
+    <div class="blog-card">
+      <div class="blog-card-img">${p.emoji}</div>
+      <div class="blog-card-body">
+        <div class="blog-meta">
+          <span class="badge badge-teal">${p.category}</span>
+          <span class="blog-meta-date">${p.date}</span>
+        </div>
+        <h3><a onclick="openPost(${p.id})" style="cursor:pointer">${p.title}</a></h3>
+        <p>${p.excerpt}</p>
+      </div>
+      <div class="blog-card-footer">
+        <span class="read-more" onclick="openPost(${p.id})">Read More →</span>
+        <span class="read-time">${p.readTime}</span>
+      </div>
+    </div>
+  `).join('') || '<p style="color:var(--text-light);padding:20px 0">No posts found.</p>';
+}
+
+function filterBlog(cat, btn) {
+  currentFilter = cat;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderBlogPosts(cat === 'all' ? null : cat);
+}
+
+function filterBlogBySearch(val) {
+  renderBlogPosts(currentFilter === 'all' ? null : currentFilter, val);
+}
+
+function openPost(id) {
+  const post = blogPosts.find(p => p.id === id);
+  if (!post) return;
+  document.getElementById('blogList').style.display = 'none';
+  document.getElementById('blogPost').style.display = 'block';
+  document.getElementById('postHeroContent').innerHTML = `
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px">
+      <span class="badge badge-teal">${post.category}</span>
+      <span style="color:rgba(255,255,255,0.5);font-size:0.85rem">${post.date} · ${post.readTime}</span>
+    </div>
+    <h1>${post.title}</h1>
+    <div style="display:flex;align-items:center;gap:12px;margin-top:20px">
+      <div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;font-size:0.9rem">GM</div>
+      <span style="color:rgba(255,255,255,0.7);font-size:0.88rem">Gershom Mwale</span>
+    </div>`;
+  document.getElementById('postBody').innerHTML = `<p style="font-size:1.1rem;color:var(--text-light);font-family:var(--font-serif);font-style:italic;margin-bottom:32px;border-left:3px solid var(--teal);padding-left:16px">${post.excerpt}</p>${post.body}`;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function closeBlogPost() {
+  document.getElementById('blogList').style.display = 'block';
+  document.getElementById('blogPost').style.display = 'none';
+}
+
+/* ─── RESOURCES NAV ─── */
+function switchResources(year, btn) {
+  document.querySelectorAll('.resources-nav-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  document.querySelectorAll('.course-section').forEach(s => {
+    s.style.display = year === 'all' || s.dataset.year === year ? 'block' : 'none';
+  });
+}
+
+/* ─── ADMIN ─── */
+function adminLogin(e) {
+  e.preventDefault();
+  document.getElementById('adminLogin').style.display = 'none';
+  document.getElementById('adminDashboard').style.display = 'block';
+  showToast('Welcome back, Gershom!', 'success');
+}
+
+function adminNav(section, btn) {
+  document.querySelectorAll('.admin-nav-item').forEach(i => i.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  ['overview','posts','resources','notes','messages'].forEach(s => {
+    const el = document.getElementById('admin-' + s);
+    if (el) el.style.display = s === section ? 'block' : 'none';
+  });
+}
+
+function showNewPostForm() {
+  const form = document.getElementById('newPostForm');
+  form.style.display = form.style.display === 'none' ? 'block' : 'none';
+}
+
+/* ─── FORMS ─── */
+function handleContactSubmit(e) {
+  e.preventDefault();
+  showToast('Message sent! I will get back to you soon.', 'success');
+  e.target.reset();
+}
+
+function handleNoteSubmit(e) {
+  e.preventDefault();
+  showToast('Notes submitted for review. Thank you!', 'success');
+  e.target.reset();
+}
+
+/* ─── SEARCH ─── */
+function handleSearch(val) { }
+function doSearch() {
+  const q = document.getElementById('globalSearch').value.trim();
+  if (!q) return;
+  showPage('blog');
+  setTimeout(() => filterBlogBySearch(q), 100);
+}
+
+/* ─── TOAST ─── */
+function showToast(msg, type = 'success') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `toast toast-${type} show`;
+  setTimeout(() => t.className = 'toast', 3500);
+}
+
+/* ─── INIT ─── */
+document.addEventListener('DOMContentLoaded', () => {
+  // Prevent default on all internal # links
+  document.querySelectorAll('a[href="#"]').forEach(a => {
+    a.addEventListener('click', e => e.preventDefault());
+  });
+  renderBlogPosts();
+});
+</script>
+
+</body>
+</html>
